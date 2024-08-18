@@ -1,0 +1,255 @@
+.navbar-nav .nav-link {
+    color: white; /* Warna teks default */
+    transition: all 0.5s ease-in-out; /* Durasi transisi diperpanjang */
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    overflow: hidden;
+}
+
+.navbar-nav .nav-link.active {
+    border-bottom: 2px solid #ffffff; /* Garis bawah pada menu aktif */
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    transform: scaleX(0);
+    border-bottom: 1px solid #ffffff;
+    transform-origin: bottom right;
+    transition: 0.4s ease-in-out;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    border-bottom: 1px solid #ffffff;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    color: #fff;
+}
+
+/* LOGIN */
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: auto;
+    text-align: center;
+}
+.login-container h1 {
+    margin-bottom: 20px;
+}
+
+
+
+/* REGISTER */
+
+.register-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: auto;
+    text-align: center;
+}
+
+.register-container h1 {
+    margin-bottom: 20px;
+}
+
+/* RESET PW */
+
+.resetpw-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.resetpw-container h1 {
+    margin-bottom: 20px;
+}
+
+
+
+/* CSS tambahan untuk tampilan event */
+
+.event-item {
+    border-radius: 0.5rem; /* rounded corners */
+    border: 2px solid #2980b9; /* border color */
+    padding: 1rem; /* padding */
+    margin-bottom: 1rem; /* space below each event */
+}
+
+.event-img img {
+    border-radius: 1rem; /* rounded corners for image */
+}
+
+.event-img img:hover {
+    opacity: 0.7;
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+
+.event-content h5 {
+    font-size: 1.25rem; /* size of event title */
+    font-weight: bold; /* bold title */
+    color: #333; /* text color */
+}
+
+.event-content p {
+    font-size: 0.875rem; /* size of description */
+    color: #555; /* text color */
+}
+
+.event-content .text-muted {
+    font-size: 0.875rem; /* size for date and time */
+    color: #888; /* muted text color */
+}
+
+.event-content .bi {
+    font-size: 1rem; /* icon size */
+}
+
+.event-content .stretched-link {
+    display: block; /* make link cover the entire area */
+    font-weight: bold; /* bold text */
+    color: #007bff; /* Changed to blue */
+    text-decoration: none; /* remove underline */
+    margin-top: 1rem; /* space above link */
+}
+
+.event-content .stretched-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* underline on hover */
+}
+
+.text-event {
+    color: #fff !important;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.img-fixed-size {
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+
+.text-muted {
+    color: rgb(255, 255, 255) !important;
+    font-weight: bold;
+}
+.card-event {
+    opacity: 1;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.card-event:hover {
+    opacity: 0.7; /* Sedikit menurunkan opacity saat di-hover */
+    transform: scale(1.05); /* Menambahkan efek zoom in */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Memberikan efek bayangan */
+}
+
+.btn-gradient {
+    position: relative;
+    background: linear-gradient(160deg, #003865, #249cff);
+    background-size: 200% 200%;
+    animation: moveBackground 3s linear infinite;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+
+    overflow: hidden;
+    z-index: 1;
+    transition: background 0.5s ease, border 0.5s ease; /* Smooth transitions */
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(160deg, #003865, #249cff);
+    background-size: 200% 200%;
+    
+    /* Remove the animation on hover to prevent conflict */
+    animation: none;
+    color: white;
+}
+
+.btn-gradient::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(160deg, #003865, #0070cd, #003865);
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: borderAnimation 3s linear infinite;
+    transition: background 0.5s ease; /* Smooth transition for border animation */
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes borderAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+
+.countdown-item {
+    text-align: center;
+}
+
+.countdown-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #dc3545; /* Warna merah untuk penekanan */
+    background-color: #f8f9fa; /* Warna latar belakang untuk kontras */
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: inline-block;
+    min-width: 70px;
+}
+
+.countdown-label {
+    font-size: 1rem;
+    color: #6c757d; /* Warna abu-abu untuk label */
+    display: block;
+    margin-top: 5px;
+}
