@@ -202,7 +202,7 @@
                                                 </div>
 
                                                 <div class="alert alert-info mt-1">
-                                                    *Harap memberitahukan <span class="text-dark fw-bold">Event
+                                                    *Harap memberitahukan <span class="text-dark fw-bold">Registration
                                                         ID</span> anda, jika ingin masuk ke ruangan <span
                                                         class="text-dark fw-bold">{{ $event->location }}</span>
                                                 </div>
